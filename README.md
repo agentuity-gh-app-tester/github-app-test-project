@@ -145,5 +145,3 @@ export default router;
 
 - [Bun](https://bun.sh/) v1.0 or higher
 - TypeScript 5+
-
-<!-- test-commit-1767718015146 -->
