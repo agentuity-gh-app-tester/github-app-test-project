@@ -9,7 +9,7 @@
 		"build": "agentuity build",
 		"dev": "agentuity dev",
 		"start": "bun .agentuity/app.js",
-		"deploy": "agentuity deploy",
+		"deploy": "agentuity deploy --log-level trace",
 		"typecheck": "bunx tsc --noEmit"
 	},
 	"dependencies": {
