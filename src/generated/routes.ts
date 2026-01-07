@@ -50,10 +50,11 @@ declare module '@agentuity/react' {
 	 */
 	export interface RouteRegistry {
 	'POST /api/hello': {
-		inputSchema: POSTApiHelloInputSchema;
-		outputSchema: POSTApiHelloOutputSchema;
-		stream: typeof hello extends { stream?: infer S } ? S : false;
-	};
+				inputSchema: POSTApiHelloInputSchema;
+				outputSchema: POSTApiHelloOutputSchema;
+				stream: typeof hello extends { stream?: infer S } ? S : false;
+				params: never;
+			};
 	}
 	
 	/**
@@ -85,7 +86,7 @@ declare module '@agentuity/react' {
 			/**
 			 * Route: POST /api/hello
 			 */
-			post: { input: POSTApiHelloInput; output: POSTApiHelloOutput; type: 'api' };
+			post: { input: POSTApiHelloInput; output: POSTApiHelloOutput; type: 'api'; params: never; paramsTuple: [] };
 		};
 	}
 }
@@ -98,7 +99,8 @@ declare module '@agentuity/react' {
 const _rpcRouteMetadata = {
 		"hello": {
 				"post": {
-						"type": "api"
+						"type": "api",
+						"path": "/api/hello"
 				}
 		}
 } as const;
